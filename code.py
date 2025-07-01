@@ -98,24 +98,24 @@ with tab2:
     (
         col1,
         col2,
-        col3,
-        col4
-    ) = st.columns(4)
+        
+        
+    ) = st.columns(2)
     with col1:
         st.subheader("Ultimas 10 Panes Reportadas")
         st.plotly_chart(fig4)
+         st.subheader('Panes ')
+        st.plotly_chart(fig7)
     with col2:
         st.subheader("Panes por Setor")
         st.plotly_chart(fig3)
-    with col3:
+
         st.subheader("Aeronave com Maiores Ocorrencias")
         st.plotly_chart(fig5)
 
         # st.subheader("Panes")
         # st.plotly_chart(fig6)
-    with col4:
-        st.subheader('Panes ')
-        st.plotly_chart(fig7)
+       
 with tab3:
     st.subheader("Cadastro ")
     with st.form("aircraft"):
