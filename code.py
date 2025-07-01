@@ -80,7 +80,7 @@ fig6 = px.histogram(panes, y="Descrição da Não Conformidade")
 desc_nc=panes.iloc[:,10]
 fig7=px.histogram(desc_nc,orientation='h')
 fig7.update_layout(yaxis={'categoryorder':'total ascending'})
-fig8=px.bar(em_aberto)
+fig8=px.bar(em_aberto,x="Descrição da Não Conformidade")
 
 tab1, tab2, tab3 = st.tabs(["Graficos Gerais", "Panes", "Cadastros"])
 
