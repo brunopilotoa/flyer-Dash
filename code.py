@@ -112,6 +112,7 @@ with tab2:
         # st.subheader("Panes")
         # st.plotly_chart(fig6)
     with col4:
+        st.subheader('Panes ')
         st.plotly_chart(fig7)
 with tab3:
     st.subheader("Cadastro ")
