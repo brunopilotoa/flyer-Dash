@@ -1,0 +1,3 @@
+-e git+https://github.com/jtemporal/caipyra.git@master#egg=caipyra
+streamlit
+plotly
