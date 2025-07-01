@@ -45,7 +45,7 @@ base.drop(columns=base.columns[0], axis=1, inplace=True)
 #    color="#1A5985",
 #    title="Comparacao do Prefixo vs Data da VTI",
 # )
-
+em_aberto = panes.loc[panes['Status'] == 'Pendente']
 fig = px.line(
     base,
     x="Data Recebimento",
@@ -80,6 +80,7 @@ fig6 = px.histogram(panes, y="Descrição da Não Conformidade")
 desc_nc=panes.iloc[:,10]
 fig7=px.histogram(desc_nc,orientation='h')
 fig7.update_layout(yaxis={'categoryorder':'total ascending'})
+fig8=px.bar(em_aberto)
 
 tab1, tab2, tab3 = st.tabs(["Graficos Gerais", "Panes", "Cadastros"])
 
@@ -113,8 +114,9 @@ with tab2:
         st.subheader("Aeronave com Maiores Ocorrencias")
         st.plotly_chart(fig5)
 
-        # st.subheader("Panes")
-        # st.plotly_chart(fig6)
+        st.subheader("Panes")
+        st.plotly_chart(fig6)
+        st.plotly_chart(fig8)
        
 with tab3:
     st.subheader("Cadastro ")
