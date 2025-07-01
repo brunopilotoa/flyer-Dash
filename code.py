@@ -104,7 +104,7 @@ with tab2:
     with col1:
         st.subheader("Ultimas 10 Panes Reportadas")
         st.plotly_chart(fig4)
-         st.subheader('Panes ')
+        st.subheader('Panes ')
         st.plotly_chart(fig7)
     with col2:
         st.subheader("Panes por Setor")
