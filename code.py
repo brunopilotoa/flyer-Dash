@@ -1,7 +1,8 @@
 import pandas as pd
 import numpy as np
 import streamlit as st
-import plost
+
+# import plost
 import plotly.express as px
 
 base = pd.read_excel("Base de Dados_Montagem Final_H23_2025.xlsx", header=1)
