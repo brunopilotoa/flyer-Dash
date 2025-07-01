@@ -77,7 +77,7 @@ fig4 = px.histogram(
 )
 fig5 = px.histogram(panes, y="Prefixo").update_yaxes(categoryorder="total ascending")
 fig6 = px.histogram(panes, y="Descrição da Não Conformidade")
-desc_nc=panes.iloc[:,10].value_counts()
+desc_nc=panes.iloc[:,10]
 fig7=px.histogram(desc_nc)
 tab1, tab2, tab3 = st.tabs(["Graficos Gerais", "Panes", "Cadastros"])
 
