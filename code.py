@@ -77,7 +77,8 @@ fig4 = px.histogram(
 )
 fig5 = px.histogram(panes, y="Prefixo").update_yaxes(categoryorder="total ascending")
 fig6 = px.histogram(panes, y="Descrição da Não Conformidade")
-
+desc_nc=panes.iloc[:,10].value_counts()
+fig7=px.histogram(desc_nc)
 tab1, tab2, tab3 = st.tabs(["Graficos Gerais", "Panes", "Cadastros"])
 
 with tab1:
@@ -96,7 +97,8 @@ with tab2:
         col1,
         col2,
         col3,
-    ) = st.columns(3)
+        col4
+    ) = st.columns(4)
     with col1:
         st.subheader("Ultimas 10 Panes Reportadas")
         st.plotly_chart(fig4)
@@ -109,6 +111,8 @@ with tab2:
 
         # st.subheader("Panes")
         # st.plotly_chart(fig6)
+    with col4:
+        st.plotly_chart(fig7)
 with tab3:
     st.subheader("Cadastro ")
     with st.form("aircraft"):
