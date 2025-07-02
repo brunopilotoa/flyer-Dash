@@ -66,7 +66,6 @@ with col1:
     anv_entregue = df_entregue["Prefixo"].value_counts()
     st.subheader("Aeronaves Entregues ")
     st.title(f"{anv_entregue.sum()}" + "\n Aeronaves LSA")
-    st.write("teste")
     #   col1, col2 = st.columns([4, 1])
     # with col1:
 
