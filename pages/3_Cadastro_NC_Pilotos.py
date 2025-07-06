@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from inicio import file, base
+from Inicio import file, base
 
 st.title("Cadastro")
 with st.form("piloto_cadastro_nc"):

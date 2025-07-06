@@ -1,5 +1,5 @@
 import streamlit as st
-from inicio import panes, px, base
+from Inicio import panes, px, base
 
 st.title("Visao Geral NCs H23")
 tab1, tab2 = st.tabs(
