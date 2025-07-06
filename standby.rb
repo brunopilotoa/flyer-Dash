@@ -78,10 +78,8 @@
 # st.plotly_chart(fig2)
 
 # st.subheader("Aeronaves Entregues")
-# df_entregue = base[base["STATUS FINAL"] == "ENTREGUE"]
 # st.write(df_entregue)
-# fig_entregue = px.bar(df_entregue, y="Data de Entrega Cliente", x="Prefixo")
-# st.plotly_chart(fig_entregue)
+
 # st.dataframe(panes)
 # (
 #    col1,
@@ -122,3 +120,10 @@ lastpanes = panes[-10:]
     # st.header("Aeronaves Entregues \n" + f"{delivered_count}")
 # with col2:
 # st.title("Graficos")
+
+
+
+        ## Bar das Aeronaves Entregues
+        entregue = base[base['STATUS FINAL']=='ENTREGUE']
+        fig_entregue = px.bar(entregue, y="Data de Entrega Cliente", x="Prefixo",title='Aeronaves Entregues')
+        st.plotly_chart(fig_entregue)
