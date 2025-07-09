@@ -9,7 +9,6 @@ tab1, tab2 = st.tabs(
         
     ]
 )
-st.divider()
 with tab1:
     # Cria o selectbox
     prefixo = st.selectbox(
@@ -18,6 +17,8 @@ with tab1:
         index=None,
         placeholder="Selecione a Aeronave",
     )
+    st.divider()
+
     col1, col2 = st.columns(2, gap="medium")
     with col1:
         st.subheader("NC em Aberto")
