@@ -38,7 +38,7 @@ with tab1:
         #)
         #st.plotly_chart(sector_panes)
 with tab2:
-    (col1, col2 ) = st.columns(4,gap='medium')
+    (col1, col2 ) = st.columns(2,gap='medium')
     with col1:
         # Figura que Mostra a Quantidade de Items por Setor AVI,GMP,CEL
         col1.fig = (
