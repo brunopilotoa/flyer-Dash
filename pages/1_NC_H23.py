@@ -38,7 +38,7 @@ with tab1:
         #)
         #st.plotly_chart(sector_panes)
 with tab2:
-    (col1, col2, col3, col4) = st.columns(4)
+    (col1, col2 ) = st.columns(4,gap='medium')
     with col1:
         # Figura que Mostra a Quantidade de Items por Setor AVI,GMP,CEL
         col1.fig = (
@@ -55,7 +55,7 @@ with tab2:
         st.plotly_chart(
             col1.fig,
         )
-    with col3:
+    #with col3:
         ## Filtrando por Tipo de NC
         desc_nc = panes["Tipo NC"].value_counts()
         fig2 = (
@@ -82,7 +82,7 @@ with tab2:
         st.plotly_chart(
             col2.fig,
         )
-    with col4:
+    #with col4:
         fig3 = (
             px.bar(panes, y="Prefixo", title="Ocorrencia por Aeronaves")
             .update_yaxes(title="Quantidade", categoryorder="total ascending")
