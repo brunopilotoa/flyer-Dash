@@ -9,7 +9,7 @@ tab1, tab2 = st.tabs(
         
     ]
 )
-
+st.divider()
 with tab1:
     # Cria o selectbox
     prefixo = st.selectbox(
