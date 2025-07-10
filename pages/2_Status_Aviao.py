@@ -17,6 +17,12 @@ with tab1:
         st.metric(label="Aeronaves Entregues", value=entregue_counts)
 
         st.plotly_chart(fig_entregue)
+
+            ## Bar das Aeronaves Entregues
+        entregue = base[base['STATUS FINAL']=='ENTREGUE']
+        fig_entregue = px.bar(entregue, y="Data de Entrega Cliente", x="Prefixo",title='Aeronaves Entregues')
+        st.plotly_chart(fig_entregue)
+        
     with col2:
         # Montagem Final
         not_entregue = base[
